@@ -6,6 +6,14 @@
 [PyTorch_Learning.ipynb](PyTorch_Learning.ipynb)
 
 
+
+# PyTorch基础知识手册
+
+[PyTorch_0.md](PyTorch_0.md)
+
+
+
+
 # 教AI学会画一条直线（回归）
 
 [PyTorch_1.md](PyTorch_1.md)
