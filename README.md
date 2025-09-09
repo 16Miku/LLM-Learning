@@ -6,7 +6,7 @@
 [PyTorch_Learning.ipynb](PyTorch_Learning.ipynb)
 
 
-# 教AI学会画一条直线
+# 教AI学会画一条直线（回归）
 
 [PyTorch_1.md](PyTorch_1.md)
 
@@ -14,7 +14,9 @@
 
 
 
+# 教AI学会判断一个数字是“大”还是“小”（分类）
 
+[PyTorch_2.md](PyTorch_2.md)
 
-
+[PyTorch_2.ipynb](PyTorch_2.ipynb)
 
