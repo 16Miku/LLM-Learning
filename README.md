@@ -20,3 +20,22 @@
 
 [PyTorch_2.ipynb](PyTorch_2.ipynb)
 
+
+
+
+
+
+
+
+# 教AI识别一个“甜甜圈”（基础神经网络）
+
+
+
+[PyTorch_3.md](PyTorch_3.md)
+
+[PyTorch_3.ipynb](PyTorch_3.ipynb)
+
+
+
+
+
