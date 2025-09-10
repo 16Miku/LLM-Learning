@@ -60,3 +60,15 @@
 
 
 
+
+
+# 使用FastAPI将Fashion-MNIST模型部署成一个功能齐全的Web API服务
+
+
+
+
+
+
+[PyTorch_5.md](PyTorch_5.md)
+
+[PyTorch_5_1.ipynb](PyTorch_5_1.ipynb)

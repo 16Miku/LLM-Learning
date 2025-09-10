@@ -1,0 +1,110 @@
+# 字节码文件
+*.pyc
+__pycache__/
+*.pyd
+*.pyo
+
+# 虚拟环境
+# 建议将虚拟环境放在项目根目录下的 .venv 或 venv 目录中
+.venv/
+venv/
+env/
+/bin/
+/include/
+/lib/
+/lib64/
+/Scripts/
+
+# 编辑器和IDE文件
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.vi
+
+# Emacs
+*~
+#*#
+.DS_Store
+
+# 构建和分发
+dist/
+build/
+*.egg-info/
+.eggs/
+sdist/
+wheel/
+*.manifest
+*.spec
+
+# 测试和覆盖率报告
+.coverage
+.tox/
+.pytest_cache/
+htmlcov/
+.nox/
+
+# 数据库文件
+*.sqlite3
+*.db
+*.db-journal
+
+# 日志文件
+*.log
+logs/
+
+# 操作系统文件
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.#*
+
+# Jupyter Notebook 检查点
+.ipynb_checkpoints/
+
+# 临时文件和备份
+*.*~
+*.bak
+*.swp
+*.tmp
+*.orig
+*#
+.#*
+
+# 配置文件 (如果它们包含敏感信息或特定于本地环境)
+# 例如：
+# config.ini
+# .env
+# settings.py (如果包含数据库凭据等敏感信息，但通常会提交不含敏感信息的版本)
+
+# 其他常见文件
+.project
+.pydevproject
+
+
+
+
