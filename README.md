@@ -53,9 +53,9 @@
 
 [PyTorch_4.md](PyTorch_4.md)
 
-[PyTorch_4.ipynb](PyTorch_4.ipynb)
+[PyTorch_4_1.ipynb](PyTorch_4_1.ipynb)
 
-
+[PyTorch_4_2.ipynb](PyTorch_4_2.ipynb)
 
 
 
