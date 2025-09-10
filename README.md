@@ -47,3 +47,16 @@
 
 
 
+# 教AI识别手写数字（卷积神经网络）
+
+
+
+[PyTorch_4.md](PyTorch_4.md)
+
+[PyTorch_4.ipynb](PyTorch_4.ipynb)
+
+
+
+
+
+
