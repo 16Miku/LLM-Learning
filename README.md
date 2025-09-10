@@ -72,3 +72,18 @@
 [PyTorch_5.md](PyTorch_5.md)
 
 [PyTorch_5_1.ipynb](PyTorch_5_1.ipynb)
+
+[PyTorch_5_2.ipynb](PyTorch_5_2.ipynb)
+
+[PyTorch_5_3.ipynb](PyTorch_5_3.ipynb)
+
+[fashion_mnist_deploy](fashion_mnist_deploy)
+
+
+
+
+
+
+
+
+

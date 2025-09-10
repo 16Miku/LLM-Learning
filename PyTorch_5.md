@@ -958,7 +958,11 @@ transform = transforms.Compose([
 
 ![alt text](images/Snipaste_2025-09-10_20-18-30.png)
 
+
+
 ![alt text](images/Snipaste_2025-09-10_20-20-13.png)
+
+![alt text](images/asuka1.jpg)
 
 ![alt text](images/Snipaste_2025-09-10_20-20-34.png)
 
@@ -967,6 +971,159 @@ transform = transforms.Compose([
 
 
 
+## 按照你的建议修改后，我又测试了一些图片，仅有一张T恤成功正确识别，其他衣服仍然均被识别为bag
+
+
+
+
+好的，收到反馈。
+
+非常感谢你如此细致地进行了重新训练和部署。这说明你已经掌握了解决问题的正确流程。
+
+既然我们在统一了预处理流程后，问题**部分解决**（至少有一张图片识别正确了），但没有完全解决，这说明我们已经走在了正确的道路上，但可能还有其他因素在干扰模型的判断。
+
+让我们进入更深一层的“**专家级调试模式**”。这次，我们要把目光从“流程”转向“**模型本身的能力和训练过程**”。
+
+---
+
+### 专家级调试：为什么我的模型还是“偏爱”Bag？
+
+当模型表现出对某个类别的强烈偏好时，通常有以下几个可能的原因：
+
+1.  **模型不够“强大” (Underfitting)**：我们当前的CNN架构可能太简单了，不足以学习到10种不同衣物之间足够精细的特征差异。
+2.  **训练不够“充分” (Insufficient Training)**：我们只训练了3个Epochs。对于一个需要学习更细致特征的模型来说，这可能不够。
+3.  **学习率可能不理想 (Learning Rate Issue)**：单一的、固定的学习率可能在训练后期无法让模型进行更精细的微调。
+
+**核心思想**：我们要对“学生的大脑”（模型架构）和“教学方法”（训练过程）进行一次升级，让它变得更聪明、学得更扎实。
+
+---
+
+### 升级方案：打造一个更强大的Fashion-MNIST分类器
+
+我们将分两步走：首先升级模型架构，然后优化训练过程。
+
+#### 第1步：升级模型架构 (让“大脑”更复杂)
+
+我们将构建一个稍微深一点的CNN。更深的网络意味着它可以学习到更“高级”、“抽象”的特征。比如第一层学到边角，第二层就能把边角组合成口袋、袖口，第三层就能把这些部件组合成一件完整的衣服。
+
+**操作：修改 `PyTorch_5.ipynb` 和 `main.py` 中的模型定义**
+
+请将两个文件中 `MNIST_CNN_Model` (或者`FashionMNIST_Model`) 的定义，替换为下面这个更强大的 `Model_V2` 版本。
+
+**`Model_V2` (新的模型架构)**
+```python
+class FashionMNIST_Model_V2(nn.Module):
+    def __init__(self):
+        super().__init__()
+        # --- 特征提取器 (变得更深了) ---
+        self.feature_extractor = nn.Sequential(
+            # 第一个卷积模块
+            nn.Conv2d(in_channels=1, out_channels=32, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2),
+
+            # 第二个卷积模块
+            nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2)
+        )
+        # --- 分类器 (现在接收更小的特征图) ---
+        self.classifier = nn.Sequential(
+            nn.Flatten(),
+            # 经过两次2x2的池化，28x28的图片变成了 7x7
+            # 最后的通道数是64
+            nn.Linear(in_features=64 * 7 * 7, out_features=10)
+        )
+
+    def forward(self, x):
+        x = self.feature_extractor(x)
+        x = self.classifier(x)
+        return x
+```
+**改动解析**：
+*   我们现在有两个卷积模块，而不是一个。
+*   我们增加了通道数（从10增加到32，再到64），让模型能学习更多种类的特征。
+*   我们每次卷积后都立即进行池化，逐步浓缩信息。
+*   最终的分类器`nn.Linear`接收的`in_features`也相应地改变了，因为特征图的尺寸和厚度都变了。
+
+#### 第2步：优化训练过程 (让“教学”更有效)
+
+**操作：修改 `PyTorch_5.ipynb` 中的训练部分**
+
+1.  **增加训练轮数 (Epochs)**
+    模型变复杂了，需要更长的时间来学习。
+    ```python
+    # 将 epochs 从 3 增加到 10
+    epochs = 10 
+    ```
+
+2.  **(可选，但推荐) 引入学习率调度器 (Learning Rate Scheduler)**
+    这是一个高级技巧，但非常有效。它可以在训练过程中动态地调整学习率。比如，我们让学习率在训练几轮后自动下降，这就像“先粗调，再精调”，有助于模型在后期找到最优解。
+
+    **在定义 `optimizer` 之后，添加学习率调度器：**
+    ```python
+    # ... optimizer 定义之后 ...
+    from torch.optim.lr_scheduler import StepLR
+
+    # 定义一个学习率调度器
+    # step_size=3: 每训练3个epochs
+    # gamma=0.1:   就把学习率乘以0.1 (降低10倍)
+    scheduler = StepLR(optimizer, step_size=3, gamma=0.1)
+
+    print("教学工具和学习率调度器准备好了！")
+    ```
+
+    **然后，在你的训练循环 `for` 循环的末尾，添加一行代码来让调度器生效：**
+    ```python
+    # ... 在 for epoch in ... 循环的最后 ...
+    
+    print(f"第 {epoch+1} 遍学习成果 -> ...")
+
+    # 在每个epoch结束后，更新学习率
+    scheduler.step() # <--- 添加这一行！
+    
+    print("--- 教学结束 ---")
+    ```
+
+### 行动计划
+
+1.  **在 `PyTorch_5.ipynb` (Colab) 中执行：**
+    a.  将模型定义替换为 `FashionMNIST_Model_V2`。
+    b.  修改 `epochs` 为 `10`。
+    c.  （推荐）添加并使用 `StepLR` 学习率调度器。
+    d.  **重新开始完整的训练**。你会发现这次训练时间更长，但最终在测试集上的准确率应该会更高（有望达到90%以上）。
+    e.  训练完成后，**保存并下载**这个新的、更强大的 `fashion_mnist_cnn_model.v2.pth` 模型文件。
+
+2.  **在 `main.py` (本地部署) 中执行：**
+    a.  将模型定义也替换为与Colab中**完全相同**的 `FashionMNIST_Model_V2`。
+    b.  修改加载模型权重的文件名，指向你新下载的 `v2` 模型文件。
+    c.  确保 `transform` 流程仍然包含 `Normalize`。
+
+3.  **重启并测试：**
+    a.  重启 `uvicorn` 服务器。
+    b.  再次用你之前失败的那些图片进行测试。
+
+### 为什么这次会成功？
+
+*   **更强的表征能力**：`Model_V2` 更深、更宽，它能从图片中提取出比旧模型丰富得多的特征细节。这使得它能够更好地区分像“Pullover”、“Shirt”、“Coat”这些外观相似的类别。
+*   **更充分的收敛**：更多的训练轮数和动态调整的学习率，确保了这个更复杂的模型有足够的时间和机会去学习这些细微的特征，而不是过早地陷入一个“差不多就行”的局部最优解（比如把很多东西都猜成Bag）。
+
+通过这次“升级”，你不仅能解决当前的问题，更重要的是，你学会了如何通过**调整模型架构**和**优化训练策略**来提升模型性能，这是AI工程师的核心技能之一。请尝试这个方案，我很期待你的好消息！
+
+
+
+
+
+
+
+## fashion_mnist_cnn_model_v2.pth效果依然不行。于是我在PyTorch_5_3.ipynb中将epochs改为30轮。这次可以识别出一个Trouser，某些dress会识别为shirt。
+
+
+![alt text](images/Snipaste_2025-09-10_22-39-47.png)
+
+
+
+![alt text](images/R.jpg)
 
 
 
