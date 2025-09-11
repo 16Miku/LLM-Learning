@@ -89,3 +89,20 @@
 [Transformer_Learning.md](Transformer_Learning.md)
 
 [Transformer_Learning.ipynb](Transformer_Learning.ipynb)
+
+
+
+
+
+
+
+
+# LLM-Learning
+
+
+
+[LLM_Learning_1.ipynb](LLM_Learning_1.ipynb)学会了如何手动调用预训练好的语言模型。
+
+[LLM_Learning_2.ipynb](LLM_Learning_2.ipynb)学习了对预训练模型进行微调 (Fine-tuning) 。
+
+[LLM_Learning_3.ipynb](LLM_Learning_3.ipynb)学习了保存、加载、分享模型。
