@@ -93,9 +93,9 @@
 
 
 
+# 通过手动删除Jupyter Notebook的metadata.widgets，解决了在 GitHub 上无法渲染和查看 Notebook 的问题。
 
-
-
+[Remove-Widgets.md](Remove-Widgets.md)
 
 # LLM-Learning
 
@@ -106,3 +106,7 @@
 [LLM_Learning_2.ipynb](LLM_Learning_2.ipynb)学习了对预训练模型进行微调 (Fine-tuning) 。
 
 [LLM_Learning_3.ipynb](LLM_Learning_3.ipynb)学习了保存、加载、分享模型。
+
+
+[LLM_Learning_4.ipynb](LLM_Learning_4.ipynb)学习了生成式AI，三种解码策略，Decoder-only和Encoder-Decoder两种架构的区别，实践了对话和摘要式应用。
+
