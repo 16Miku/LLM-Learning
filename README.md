@@ -110,3 +110,21 @@
 
 [LLM_Learning_4.ipynb](LLM_Learning_4.ipynb)学习了生成式AI，三种解码策略，Decoder-only和Encoder-Decoder两种架构的区别，实践了对话和摘要式应用。
 
+
+
+[LLM_Learning_5.ipynb](LLM_Learning_5.ipynb)学习了LoRA高效微调。
+
+
+[Chat_嬛嬛.ipynb](Chat_嬛嬛.ipynb)学习了开源项目self-llm的Chat-嬛嬛项目，并在colab中进行实践微调，但是colab免费T4 GPU显存不够用。
+
+
+[Chat_嬛嬛_4位量化.ipynb](Chat_嬛嬛_4位量化.ipynb)使用4位量化技术+LoRA进行了微调实践，成功在colab免费T4 GPU上运行。
+
+
+
+
+
+
+
+
+
