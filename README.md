@@ -121,10 +121,10 @@
 [Chat_嬛嬛_4位量化.ipynb](Chat_嬛嬛_4位量化.ipynb)使用4位量化技术+LoRA进行了微调实践，成功在colab免费T4 GPU上运行。
 
 
+[LLM_Learning_6.ipynb](LLM_Learning_6.ipynb)学习了LoRA模型的合并、保存与加载，但还没有运行代码实践。
 
+[LLM_Learning_7.ipynb](LLM_Learning_7.ipynb)学习了使用经典评估指标 ROUGE 进行模型评估。
 
-
-
-
+[LLM_Learning_8.ipynb](LLM_Learning_8.ipynb)学习了搭建基于关键词匹配的简易RAG系统。
 
 
