@@ -121,10 +121,30 @@
 [Chat_嬛嬛_4位量化.ipynb](Chat_嬛嬛_4位量化.ipynb)使用4位量化技术+LoRA进行了微调实践，成功在colab免费T4 GPU上运行。
 
 
+[Chat_嬛嬛_微调并合并推送.ipynb](Chat_嬛嬛_微调并合并推送.ipynb)使用L4 GPU成功进行了微调，并将训练好的LoRA“插件”和Llama3基础模型进行合并为“Chat-嬛嬛”模型，推送至Hugging Face。
+
+[Chat_嬛嬛_拉取检验.ipynb](Chat_嬛嬛_拉取检验.ipynb)从Hub仓库拉取微调模型进行检验。
+
+微调模型地址：https://huggingface.co/16Miku/Chat-HuanHuan-Llama3-8B-merged
+
+
 [LLM_Learning_6.ipynb](LLM_Learning_6.ipynb)学习了LoRA模型的合并、保存与加载，但还没有运行代码实践。
+
+
+[LLM_Learning_6_1.ipynb](LLM_Learning_6_1.ipynb)使用T4 GPU 进行微调，训练了两个多小时，训练完放着没及时后续操作，断开了。
+
+
 
 [LLM_Learning_7.ipynb](LLM_Learning_7.ipynb)学习了使用经典评估指标 ROUGE 进行模型评估。
 
 [LLM_Learning_8.ipynb](LLM_Learning_8.ipynb)学习了搭建基于关键词匹配的简易RAG系统。
+
+
+[LLM_Learning_9.ipynb](LLM_Learning_9.ipynb)学习了多模态大模型的原理，并实践运行LLaVA模型。
+
+
+[LLM_Learning_10.ipynb](LLM_Learning_10.ipynb)学习了基于 LangChain + Gemini 的简易 ReAct Agent。
+
+
 
 
