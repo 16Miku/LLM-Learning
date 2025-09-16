@@ -148,3 +148,23 @@
 
 
 
+
+
+
+[LLM_Learning_11.ipynb](LLM_Learning_11.ipynb)学习了Flash Attention优化。
+
+
+
+[LLM_Learning_12.ipynb](LLM_Learning_12.ipynb)学些了训练后量化PTQ，但是运行GPTQ代码一直不成功。学习了使用 unsloth 工具进行一键式优化，并将用 unsloth 量化后的模型以两种格式分别保存并推送到我的Huggingface仓库。
+
+
+原生的Hugging Face格式：
+https://huggingface.co/16Miku/llama-3-8b-instruct-unsloth-4bit
+
+GGUF格式：
+https://huggingface.co/16Miku/llama-3-8b-instruct-unsloth-gguf
+
+
+
+
+
