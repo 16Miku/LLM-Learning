@@ -171,7 +171,7 @@ https://huggingface.co/16Miku/llama-3-8b-instruct-unsloth-gguf
 
 
 
-
+[LLM_Learning_14.ipynb](LLM_Learning_14.ipynb)学习了使用多智能体协作框架 CrewAI 构建了一个研究团队。
 
 
 
