@@ -176,4 +176,4 @@ https://huggingface.co/16Miku/llama-3-8b-instruct-unsloth-gguf
 
 
 
-
+[Whisper_Test.ipynb](Whisper_Test.ipynb)在 Colab 上部署了 Whisper 开源 STT 模型，并完成了本地 WAV 录音文件的上传和文本转换。
