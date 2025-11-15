@@ -177,3 +177,12 @@ https://huggingface.co/16Miku/llama-3-8b-instruct-unsloth-gguf
 
 
 [Whisper_Test.ipynb](Whisper_Test.ipynb)在 Colab 上部署了 Whisper 开源 STT 模型，并完成了本地 WAV 录音文件的上传和文本转换。
+
+
+
+[Getting_started_with_google_colab_ai.ipynb](Getting_started_with_google_colab_ai.ipynb)学些了`google.colab.ai`库的使用。
+
+
+[VLLM_Test.ipynb](VLLM_Test.ipynb)学习了Colab环境中vLLM的安装和使用。
+
+
