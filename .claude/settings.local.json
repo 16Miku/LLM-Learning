@@ -5,7 +5,8 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebSearch",
       "WebFetch(domain:qwen.readthedocs.io)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "mcp__upstash-context7-mcp__get-library-docs"
     ],
     "deny": [],
     "ask": []
