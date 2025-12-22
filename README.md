@@ -22,7 +22,7 @@
 
 
 
-# 教AI学会判断一个数字是“大”还是“小”（分类）
+# 教AI学会判断一个数字是"大"还是"小"（分类）
 
 [PyTorch_2.md](PyTorch_2.md)
 
@@ -31,11 +31,7 @@
 
 
 
-
-
-
-
-# 教AI识别一个“甜甜圈”（基础神经网络）
+# 教AI识别一个"甜甜圈"（基础神经网络）
 
 
 
@@ -46,9 +42,7 @@
 
 
 
-
 # 教AI识别手写数字（卷积神经网络）
-
 
 
 [PyTorch_4.md](PyTorch_4.md)
@@ -60,11 +54,7 @@
 
 
 
-
-
 # 使用FastAPI将Fashion-MNIST模型部署成一个功能齐全的Web API服务
-
-
 
 
 
@@ -78,8 +68,6 @@
 [PyTorch_5_3.ipynb](PyTorch_5_3.ipynb)
 
 [fashion_mnist_deploy](fashion_mnist_deploy)
-
-
 
 
 
@@ -121,7 +109,7 @@
 [Chat_嬛嬛_4位量化.ipynb](Chat_嬛嬛_4位量化.ipynb)使用4位量化技术+LoRA进行了微调实践，成功在colab免费T4 GPU上运行。
 
 
-[Chat_嬛嬛_微调并合并推送.ipynb](Chat_嬛嬛_微调并合并推送.ipynb)使用L4 GPU成功进行了微调，并将训练好的LoRA“插件”和Llama3基础模型进行合并为“Chat-嬛嬛”模型，推送至Hugging Face。
+[Chat_嬛嬛_微调并合并推送.ipynb](Chat_嬛嬛_微调并合并推送.ipynb)使用L4 GPU成功进行了微调，并将训练好的LoRA"插件"和Llama3基础模型进行合并为"Chat-嬛嬛"模型，推送至Hugging Face。
 
 [Chat_嬛嬛_拉取检验.ipynb](Chat_嬛嬛_拉取检验.ipynb)从Hub仓库拉取微调模型进行检验。
 
@@ -144,9 +132,6 @@
 
 
 [LLM_Learning_10.ipynb](LLM_Learning_10.ipynb)学习了基于 LangChain + Gemini 的简易 ReAct Agent。
-
-
-
 
 
 
@@ -180,9 +165,18 @@ https://huggingface.co/16Miku/llama-3-8b-instruct-unsloth-gguf
 
 
 
-[Getting_started_with_google_colab_ai.ipynb](Getting_started_with_google_colab_ai.ipynb)学些了`google.colab.ai`库的使用。
+[Getting_started_with_google_colab_ai.ipynb](Getting_started_with_google_colab_ai.ipynb)学习了`google.colab.ai`库的使用。
 
 
 [VLLM_Test.ipynb](VLLM_Test.ipynb)学习了Colab环境中vLLM的安装和使用。
 
 
+# 大模型部署学习
+
+[Deploy/Qwen3-8B-Transformers.ipynb](Deploy/Qwen3-8B-Transformers.ipynb) 学习了使用 Transformers 部署 Qwen3-8B 大模型进行推理。包含详尽的代码注释，涵盖：
+- 使用 ModelScope 下载模型
+- 使用 Transformers 加载模型和分词器
+- Qwen3 的思考模式（enable_thinking）特性
+- 文本生成的采样参数（temperature、top_p、top_k）详解
+
+[Deploy/02-Qwen3-8B-vLLM 部署调用.md](Deploy/02-Qwen3-8B-vLLM%20部署调用.md) 参考教程：datawhalechina/self-llm 的 vLLM 部署教程。
