@@ -107,11 +107,11 @@ DataWhale在 AutoDL 平台准备的 Qwen3 的环境镜像，点击下方链接�
 
 
 
-![alt text](../images/Snipaste_2025-12-23_10-18-01.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_10-18-01.png)
 
-![alt text](../images/Snipaste_2025-12-23_10-18-30.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_10-18-30.png)
 
-![alt text](../images/Snipaste_2025-12-23_10-20-19.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_10-20-19.png)
 
 
 #### 步骤 3：创建实例
@@ -139,7 +139,7 @@ DataWhale在 AutoDL 平台准备的 Qwen3 的环境镜像，点击下方链接�
 
 
 
-![alt text](../images/Snipaste_2025-12-23_10-45-56.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_10-45-56.png)
 
 
 
@@ -149,10 +149,10 @@ DataWhale在 AutoDL 平台准备的 Qwen3 的环境镜像，点击下方链接�
 按 `Ctrl+Shift+P`，输入 `Remote-SSH: Open SSH Configuration File`，选择用户目录下的 config 文件。
 
 
-![alt text](../images/Snipaste_2025-12-23_10-46-48.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_10-46-48.png)
 
 
-![alt text](../images/Snipaste_2025-12-23_10-47-14.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_10-47-14.png)
 
 
 
@@ -185,7 +185,7 @@ Host autodl-qwen3
 > **注意**：请将 `HostName` 和 `Port` 替换为你实际的 AutoDL 实例信息。
 
 
-![alt text](../images/Snipaste_2025-12-23_10-50-28.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_10-50-28.png)
 
 
 
@@ -201,15 +201,15 @@ Host autodl-qwen3
 
 
 
-![alt text](../images/Snipaste_2025-12-23_10-51-08.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_10-51-08.png)
 
-![alt text](../images/Snipaste_2025-12-23_10-51-17.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_10-51-17.png)
 
 
 
-![alt text](../images/Snipaste_2025-12-23_10-51-35.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_10-51-35.png)
 
-![alt text](../images/Snipaste_2025-12-23_10-51-49.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_10-51-49.png)
 
 
 ### 3.3 打开终端
@@ -217,7 +217,7 @@ Host autodl-qwen3
 
 连接成功后，打开/root/autodl-tmp文件夹。
 
-![alt text](../images/Snipaste_2025-12-23_10-55-02.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_10-55-02.png)
 
 
 
@@ -229,7 +229,7 @@ root@autodl-container-xxxxx:~#
 
 
 
-![alt text](../images/Snipaste_2025-12-23_10-55-45.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_10-55-45.png)
 
 
 
@@ -514,7 +514,7 @@ Downloading [model-00002-of-00005.safetensors]: 100%|==========|
 **【截图位置：模型下载完成】**
 
 
-![alt text](../images/Snipaste_2025-12-23_11-42-29.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_11-42-29.png)
 
 
 
@@ -1008,7 +1008,7 @@ Response: '<think>\n嗯，用户问的是大模型的简短介绍...\n</think>\n
 
 
 
-![alt text](../images/Snipaste_2025-12-23_11-53-40.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_11-53-40.png)
 
 
 
@@ -1084,7 +1084,7 @@ if __name__ == "__main__":
 ```
 
 
-![alt text](../images/Snipaste_2025-12-23_11-57-31.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_11-57-31.png)
 
 
 
@@ -1189,11 +1189,11 @@ INFO:     Application startup complete.
 
 
 
-![alt text](../images/Snipaste_2025-12-23_12-01-46.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_12-01-46.png)
 
-![alt text](../images/Snipaste_2025-12-23_12-05-38.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_12-05-38.png)
 
-![alt text](../images/Snipaste_2025-12-23_12-09-09.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_12-09-09.png)
 
 
 ---
@@ -1490,9 +1490,9 @@ completion = client.chat.completions.create(
 print(completion.choices[0].message)
 ```
 
-![alt text](../images/Snipaste_2025-12-23_12-23-22.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_12-23-22.png)
 
-![alt text](../images/Snipaste_2025-12-23_12-23-47.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_12-23-47.png)
 
 
 
@@ -1533,9 +1533,9 @@ chat_outputs = client.chat.completions.create(
 print(chat_outputs)
 ```
 
-![alt text](../images/Snipaste_2025-12-23_12-27-45.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_12-27-45.png)
 
-![alt text](../images/Snipaste_2025-12-23_12-27-55.png)
+![alt text](https://raw.githubusercontent.com/16Miku/LLM-Learning/refs/heads/main/images/Snipaste_2025-12-23_12-27-55.png)
 
 
 **【三个 API 测试脚本对比】**
