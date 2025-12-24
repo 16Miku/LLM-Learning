@@ -173,10 +173,17 @@ https://huggingface.co/16Miku/llama-3-8b-instruct-unsloth-gguf
 
 # 大模型部署学习
 
-[Deploy/Qwen3-8B-Transformers.ipynb](Deploy/Qwen3-8B-Transformers.ipynb) 学习了使用 Transformers 部署 Qwen3-8B 大模型进行推理。包含详尽的代码注释，涵盖：
+[Deploy\Qwen3-8B-Transformers-Colab.ipynb](Deploy\Qwen3-8B-Transformers-Colab.ipynb) 学习了使用 Transformers 部署 Qwen3-8B 大模型进行推理。包含详尽的代码注释，涵盖：
 - 使用 ModelScope 下载模型
 - 使用 Transformers 加载模型和分词器
 - Qwen3 的思考模式（enable_thinking）特性
 - 文本生成的采样参数（temperature、top_p、top_k）详解
 
 [Deploy/02-Qwen3-8B-vLLM 部署调用.md](Deploy/02-Qwen3-8B-vLLM%20部署调用.md) 参考教程：datawhalechina/self-llm 的 vLLM 部署教程。
+
+
+Qwen3-8B vLLM 部署实践教程（AutoDL 平台）：
+
+[Deploy\Qwen3-8B-vLLM-AutoDL.md](Deploy/Qwen3-8B-vLLM-AutoDL.md)
+
+
